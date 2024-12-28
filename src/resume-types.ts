@@ -40,6 +40,7 @@ type Work = {
 type Resume = {
     basics : Basics | undefined;
     work : Work[] | undefined;
+    skills: Skill[] | undefined;
 }
 
 
