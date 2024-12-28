@@ -28,6 +28,7 @@ void i18n
                     present: 'present',
                     sections : {
                         links : "Where to find me",
+                        languages: "Languages",
                         jobs : "Working experience",
                         skills : "Skills"
                     }
@@ -40,6 +41,7 @@ void i18n
                     present: 'současnost',
                     sections : {
                         links : "Kde mě najdete",
+                        languages: "Jazyky",
                         jobs : "Pracovní zkušenosti",
                         skills : "Dovednosti"
                     }

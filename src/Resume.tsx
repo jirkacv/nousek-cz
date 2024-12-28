@@ -41,7 +41,7 @@ function Link({url, title, icon}: LinkProps) {
 }
 
 function Links({basics}: { basics: ResumeType.Basics }) {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     return (
         <section className="flex-grow">
             <h2 className="section-header">{t('sections.links')}</h2>
@@ -62,7 +62,32 @@ function Links({basics}: { basics: ResumeType.Basics }) {
     )
 }
 
-function Basics({basics}: { basics: ResumeType.Basics | undefined }) {
+function Languages({ languages }: { languages: ResumeType.Language[] | undefined }) {
+    const { t } = useTranslation();
+    if (languages && languages.length > 0) {
+        return (
+            <section className="flex-grow">
+                <h2 className="section-header">{t('sections.languages')}</h2>
+                {languages.map(lang => {
+                    return (
+                        <div key={lang.language}>
+                            <span>{lang.language}</span>
+                            {lang.fluency !== '' && <span className="ml-2 text-yinmn_blue dark:text-timberwolf-400">{lang.fluency}</span>}
+                        </div>
+                    )
+                })}
+            </section>
+        )
+    }
+    return null;
+}
+
+interface BasicsProps {
+    basics: ResumeType.Basics | undefined
+    languages: ResumeType.Language[] | undefined
+}
+
+function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
             <section className="flex flex-col md:flex-row justify-between">
@@ -79,17 +104,16 @@ function Basics({basics}: { basics: ResumeType.Basics | undefined }) {
                     )}
                 </div>
                 <Links basics={basics}/>
+                <Languages languages={languages}/>
             </section>
         )
     }
     return null
 }
 
-function Skills({skills}: { skills: ResumeType.Skill[] }) {
-    const { t } = useTranslation();
+function JobSkills({skills}: { skills: ResumeType.Skill[] }) {
     return (
-        <section className="basis-1/4">
-            <h4 className="my-2 text-xl font-medium text-left md:invisible">{t('sections.skills')}</h4>
+        <section className="basis-1/4 content-center">
             <div className="flex flex-row gap-2 items-center justify-center flex-wrap basis-auto shrink grow">
                 {skills.map((skill) => {
                     return (
@@ -127,28 +151,27 @@ function Job({work}: { work: ResumeType.Work }) {
                 )}
                 {work.highlights && work.highlights.length > 0 && (
                     <ul className="list-[square]">
-                        {work.highlights.map((highlight, i) => (
+                        {work.highlights.map((highlight, i) =>
                             <li key={i} className="ml-6">{highlight}</li>
-                        ))}
-
+                        )}
                     </ul>
                 )}
             </div>
             {work.skills && work.skills.length > 0 && (
-                <Skills skills={work.skills}/>
+                <JobSkills skills={work.skills}/>
             )}
-</div>
+        </div>
     )
 }
 
 function Jobs({work}: { work: ResumeType.Work[] | undefined }) {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     if (work && work.length > 0) {
         return (
             <section className="my-8">
                 <h2 className="section-header">{t('sections.jobs')}</h2>
                 {work.map(job => {
-                    return (<Job key={`${job.name}_${job.startDate}`} work={job}/>)
+                    return <Job key={`${job.name}_${job.startDate}`} work={job}/>
                 })}
             </section>
         )
@@ -156,13 +179,52 @@ function Jobs({work}: { work: ResumeType.Work[] | undefined }) {
     return null;
 }
 
+function Skill({skill}: { skill: ResumeType.Skill }) {
+    return (
+        <div>
+            <h3 className="text-xl font-semibold">{skill.name}</h3>
+            {skill.level !== '' && <div className="mb-4 text-sm text-yinmn_blue dark:text-timberwolf-400">{skill.level}</div>}
+            {skill.keywords && skill.keywords.length > 0 && (
+                <div className="flex flex-row gap-2 items-center justify-center flex-wrap basis-auto shrink grow">
+                    {skill.keywords.map((keyword) => {
+                        return (
+                            <span
+                                key={keyword}
+                                className="flex-auto px-2 grow-0 leading-8 whitespace-nowrap rounded-xl bg-yinmn_blue text-platinum dark:bg-eerie_black dark:text-timberwolf-700">
+                                {keyword}
+                            </span>
+                        )
+                    }) }
+                </div>
+            )}
+        </div>
+    )
+}
+function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
+    const { t } = useTranslation();
+    if (skills && skills.length > 0) {
+        return (
+            <section>
+                <h2 className="section-header">{t('sections.skills')}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    {skills.map((skill) => {
+                        return <Skill key={skill.name} skill={skill} />
+                    })}
+                </div>
+            </section>
+        )
+    }
+    return null;
+}
+
 function Resume() {
-    const {i18n} = useTranslation();
+    const { i18n } = useTranslation();
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
         <div className="mb-auto p-8 py-4">
-            <Basics basics={resume.basics}/>
-            <Jobs work={resume.work}/>
+            <Basics basics={resume.basics} languages={resume.languages} />
+            <Jobs work={resume.work} />
+            <Skills skills={resume.skills} />
         </div>
     )
 }

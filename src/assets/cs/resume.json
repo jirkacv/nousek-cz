@@ -443,164 +443,34 @@
   "publications": [],
   "skills": [
     {
-      "name": "F#",
-      "level": "",
-      "keywords": []
+      "name": "Backend",
+      "level": "+++",
+      "keywords": ["dotnet", "F#", "C#", "SQL", "NoSQL", "ASP.NET", "APIs", "Microservices", "Containers", "Queues" ]
     },
     {
-      "name": "C#",
-      "level": "",
-      "keywords": []
+      "name": "Frontend",
+      "level": "+++",
+      "keywords": ["React.js", "JavaScript", "F#/Fable", "CSS", "SEO" ]
     },
     {
-      "name": ".NET",
-      "level": "",
-      "keywords": []
+      "name": "DevOps",
+      "level": "++",
+      "keywords": ["Microsoft Azure", "Docker", "K8s", "Azure DevOps", "Pulumi" ]
     },
     {
-      "name": "Microsoft Azure",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "ASP.NET",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Git",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Linux",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "KnockoutJS",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "PL/SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "ASP.NET Web API",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Bootstrap",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "ASP.NET MVC",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Pro*C",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "redux",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "React.js",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Delphi",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Informix",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "JavaScript",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Software Development",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "DevExpress",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "jQuery",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Unit Testing",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": ".NET Framework",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "XML",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "T-SQL",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Java",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "T-SQL Stored Procedures",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "OOP",
-      "level": "",
-      "keywords": []
-    },
-    {
-      "name": "Programming",
-      "level": "",
-      "keywords": []
+      "name": "Tech z dob minulých",
+      "level": "který jsem delší dobu nepoužil, ale stále si pamatuji",
+      "keywords": ["Java", "Delphi", "Oracle PL/SQL", "WinForms", "WebForms", ".Net Core", "WCF" ]
     }
   ],
   "languages": [
     {
-      "fluency": "Native Speaker",
-      "language": "Czech"
+      "fluency": "Rodilý mluvčí",
+      "language": "Čeština"
     },
     {
-      "fluency": "Professional Working",
-      "language": "English"
+      "fluency": "Velmi pokročilý",
+      "language": "Angličtina"
     }
   ],
   "references": [],
