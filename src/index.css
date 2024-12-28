@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[class*="fa-"] {
+    margin-right: 5px;
+    width: 20px;
+}
+
+@layer components {
+    .section-header {
+        @apply font-semibold text-2xl my-2
+    }
+}

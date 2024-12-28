@@ -1,0 +1,626 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Jiří Petrnoušek",
+    "label": ".Net & JavaScript Developer",
+    "image": "",
+    "email": "jiri.petrnousek@centrum.cz",
+    "phone": "",
+    "url": "https://www.nousek.cz",
+    "summary": "",
+    "location": {
+      "countryCode": "CZ",
+      "city": "Praha / Londýn"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Jiři Petrnoušek",
+        "url": "https://www.linkedin.com/in/jiri-petrnousek/"
+      },
+      {
+        "network": "Github",
+        "username": "jirkacv",
+        "url": "https://github.com/jirkacv/nousek-cz"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Proffsmagasinet Svenska AB",
+      "position": "Senior Developer",
+      "startDate": "2020-12-31",
+      "endDate": "",
+      "summary": "Vývoj e-commerce systému na míru, frontend i backend (React.js, .NET, F#, Azure, Pulumi, Docker, K8s). Také jsem pracoval na integraci mnoha dalších systémů:",
+      "highlights": [
+        "Bloomreach CDP (trackování uživatelů (frontend a backend), systém doporučování produktů, reporty, emailové kampaně)",
+        "Antavo (Customer loyalty platform)",
+        "Zendesk (API pro správu ticketů, vývoj Zendesk Apps)",
+        "Prismic (headless CMS)",
+        "Postnord (automatizace vratek, sledování balíků)",
+        "CookieBot",
+        "Google služby (Search console, GTM, Google Analytics)"
+      ],
+      "url": "https://www.linkedin.com/company/proffsmagasinet/",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "F#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Fable",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "React.js",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Microsoft Azure",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "SQL",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "JavaScript",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Pulumi",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Docker",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "K8s",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Komerční banka",
+      "position": "Senior Software Developer",
+      "startDate": "2019-07-31",
+      "endDate": "2020-12-31",
+      "highlights": [
+        "Vývoj a údržba interních webových aplikací pro správu investic a zákazníků",
+        "Design a vývoj nového API frameworku pro snazší vývoj a integraci nových REST API služeb"
+      ],
+      "summary": "",
+      "url": "https://www.linkedin.com/company/komercni-banka/",
+      "location": "Praha",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET MVC",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "DevExpress",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "JavaScript",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "SQL",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Oracle",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "WCF",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "OpenApi 3",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Albatros Media a.s.",
+      "position": "Senior Web Developer",
+      "startDate": "2019-01-31",
+      "endDate": "2019-06-30",
+      "highlights": [],
+      "summary": "Údržba a vývoj webových stránek vydavatelství",
+      "url": "https://www.linkedin.com/company/albatros-media-a-s-/",
+      "location": "Praha",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET MVC",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "React.js",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "JavaScript",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Interoute / GTT",
+      "position": "Senior .Net Developer, Cloud Services",
+      "startDate": "2016-07-31",
+      "endDate": "2019-06-30",
+      "summary": "Interoute převzalo GTT. \nPozice i náplň práce byly stejné jako v Interoute",
+      "highlights": [
+        "Vývoj portálu MyServices pro self-service správu cloud řešení (ASP.NET MVC, Web APIs, MS SQL a JavaScript)",
+        "Design a vývoj podpůrných microslužeb (REST API; škálovatelné služby pomocí RabbitMQ front) s využitím CI a Docker Swarm (.NET Core C#/F#)",
+        "Vývoj nových částí UI v React.js a redux"
+      ],
+      "url": "https://www.linkedin.com/company/gtt/",
+      "location": "Praha",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET MVC",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Web APIs",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "JavaScript",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "MS SQL",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Docker",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Docker swarm",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "F#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "React.js",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "redux",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "RabbitMQ",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Infor",
+      "position": "Software Engineer",
+      "startDate": "2014-03-31",
+      "endDate": "2016-06-30",
+      "highlights": [],
+      "summary": "Vývoj a údržba aplikací pro zdravotnictví, jako správa pacientů nebo systém pro plánování schůzek",
+      "url": "https://www.linkedin.com/company/infor/",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "WinForms",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Oracle",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Delphi",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Pro*C/C++",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Asseco Solutions",
+      "position": "Programmer",
+      "startDate": "2011-10-31",
+      "endDate": "2014-02-28",
+      "highlights": [
+        "Vývoj komerčního ERP systému Helios Orange (Delphi, MSSQL)",
+        "Vývoj a údržba podpůrných ASP.NET aplikací (C#, MSSQL)"
+      ],
+      "summary": "",
+      "url": "https://www.linkedin.com/company/asseco-solutions/",
+      "skills": [
+        {
+          "name": "dotnet",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "C#",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "ASP.NET",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "WinForms",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Delphi",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "MS SQL",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Česká průmyslová zdravotní pojišťovna",
+      "position": "Programmer, Analyst",
+      "startDate": "2009-10-31",
+      "endDate": "2011-09-30",
+      "highlights": [],
+      "summary": "Vývoj firemních systémů v Delphi/Java s Informix databází",
+      "url": "https://cpzp.cz/",
+      "skills": [
+        {
+          "name": "Delphi",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Informix",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "SQL",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Java",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    },
+    {
+      "name": "Česká národní zdravotní pojišťovna",
+      "position": "Programmer",
+      "startDate": "2006-07-31",
+      "endDate": "2009-09-30",
+      "highlights": [],
+      "summary": "Vývoj firemních systémů v Delphi s Informix databází",
+      "url": "https://cpzp.cz/",
+      "skills": [
+        {
+          "name": "Delphi",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "Informix",
+          "level": "",
+          "keywords": []
+        },
+        {
+          "name": "SQL",
+          "level": "",
+          "keywords": []
+        }
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Střední průmyslová škola Chomutov",
+      "area": "Technika přenosu signálu, Telekomunikační systémy",
+      "studyType": "Maturita",
+      "startDate": "2002-12-31",
+      "endDate": "2006-12-31",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "F#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "C#",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": ".NET",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Microsoft Azure",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASP.NET",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Linux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "KnockoutJS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PL/SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASP.NET Web API",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Bootstrap",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASP.NET MVC",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Pro*C",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "redux",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Delphi",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Informix",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Software Development",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "DevExpress",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "jQuery",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Unit Testing",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": ".NET Framework",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "XML",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "T-SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "T-SQL Stored Procedures",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "OOP",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Programming",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Native Speaker",
+      "language": "Czech"
+    },
+    {
+      "fluency": "Professional Working",
+      "language": "English"
+    }
+  ],
+  "references": [],
+  "interests": [
+    {
+      "name": "Geocaching"
+    },
+    {
+      "name": "Hiking"
+    },
+    {
+      "name": "MTB"
+    },
+    {
+      "name": "Technology"
+    }
+  ],
+  "projects": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
