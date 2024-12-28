@@ -37,11 +37,17 @@ type Work = {
     skills: Skill[] | undefined;
 }
 
+type Language = {
+    fluency : string;
+    language : string;
+}
+
 type Resume = {
     basics : Basics | undefined;
     work : Work[] | undefined;
     skills: Skill[] | undefined;
+    languages : Language[] | undefined;
 }
 
 
-export type { Resume, Basics, Profile, Work, Skill }
+export type { Resume, Basics, Profile, Work, Skill, Language }

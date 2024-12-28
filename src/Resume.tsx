@@ -62,7 +62,32 @@ function Links({basics}: { basics: ResumeType.Basics }) {
     )
 }
 
-function Basics({basics}: { basics: ResumeType.Basics | undefined }) {
+function Languages({ languages }: { languages: ResumeType.Language[] | undefined }) {
+    const { t } = useTranslation();
+    if (languages && languages.length > 0) {
+        return (
+            <section className="flex-grow">
+                <h2 className="section-header">{t('sections.languages')}</h2>
+                {languages.map(lang => {
+                    return (
+                        <div key={lang.language}>
+                            <span>{lang.language}</span>
+                            {lang.fluency !== '' && <span className="ml-2 text-yinmn_blue dark:text-timberwolf-400">{lang.fluency}</span>}
+                        </div>
+                    )
+                })}
+            </section>
+        )
+    }
+    return null;
+}
+
+interface BasicsProps {
+    basics: ResumeType.Basics | undefined
+    languages: ResumeType.Language[] | undefined
+}
+
+function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
             <section className="flex flex-col md:flex-row justify-between">
@@ -79,6 +104,7 @@ function Basics({basics}: { basics: ResumeType.Basics | undefined }) {
                     )}
                 </div>
                 <Links basics={basics}/>
+                <Languages languages={languages}/>
             </section>
         )
     }
@@ -195,7 +221,7 @@ function Resume() {
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
         <div className="mb-auto p-8 py-4">
-            <Basics basics={resume.basics} />
+            <Basics basics={resume.basics} languages={resume.languages} />
             <Jobs work={resume.work} />
             <Skills skills={resume.skills} />
         </div>
