@@ -188,7 +188,8 @@ function Skill({skill}: { skill: ResumeType.Skill }) {
                 <div className="flex flex-row gap-2 items-center justify-center flex-wrap basis-auto shrink grow">
                     {skill.keywords.map((keyword) => {
                         return (
-                            <span key={keyword}
+                            <span
+                                key={keyword}
                                 className="flex-auto px-2 grow-0 leading-8 whitespace-nowrap rounded-xl bg-yinmn_blue text-platinum dark:bg-eerie_black dark:text-timberwolf-700">
                                 {keyword}
                             </span>
@@ -203,7 +204,7 @@ function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
     const { t } = useTranslation();
     if (skills && skills.length > 0) {
         return (
-            <section className="">
+            <section>
                 <h2 className="section-header">{t('sections.skills')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {skills.map((skill) => {
