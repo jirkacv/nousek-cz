@@ -32,7 +32,7 @@ interface LinkProps {
 function Link({url, title, icon}: LinkProps) {
     return (
         <div>
-            <a href={url} rel="noopener noreferrer" className="text-yinmn_blue dark:text-flame font-medium hover:underline">
+            <a href={url} rel="noopener noreferrer" className="text-yinmn_blue dark:text-orange_web font-medium hover:underline">
                 {icon && <FontAwesomeIcon icon={icon}/>}
                 {title}
             </a>
@@ -90,7 +90,7 @@ interface BasicsProps {
 function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
-            <section className="flex flex-col md:flex-row justify-between">
+            <section className="section flex flex-col md:flex-row justify-between">
                 <div className="flex-grow">
                     <h1 className="text-4xl my-2 font-semibold">{basics.name}</h1>
                     {basics.label !== '' && (
@@ -111,17 +111,21 @@ function Basics({basics, languages}: BasicsProps) {
     return null
 }
 
+function SkillTag ( { skill } : { skill : string } ) {
+    return (
+        <span
+            className="font-mono text-sm font-thin flex-auto px-2 grow-0 leading-8 whitespace-nowrap border-x-2 rounded-xl border-yinmn_blue dark:border-x-orange_web">
+            {skill}
+        </span>
+    )
+}
+
 function JobSkills({skills}: { skills: ResumeType.Skill[] }) {
     return (
         <section className="basis-1/4 content-center">
             <div className="flex flex-row gap-2 items-center justify-center flex-wrap basis-auto shrink grow">
                 {skills.map((skill) => {
-                    return (
-                        <span key={skill.name}
-                              className="flex-auto px-2 grow-0 leading-8 whitespace-nowrap rounded-xl bg-yinmn_blue text-platinum dark:bg-eerie_black dark:text-timberwolf-700">
-                            {skill.name}
-                        </span>
-                    )
+                    return <SkillTag key={skill.name} skill={skill.name} />
                 })}
             </div>
         </section>
@@ -135,15 +139,19 @@ function Job({work}: { work: ResumeType.Work }) {
 
     const workName =
         work.url
-            ? <a href={work.url} rel="noopener noreferrer" className="text-yinmn_blue dark:text-flame font-medium hover:underline">{work.name}</a>
+            ? <a href={work.url} rel="noopener noreferrer"
+                 className="text-yinmn_blue dark:text-orange_web font-medium hover:underline">{work.name}</a>
             : <span>work.name</span>
 
     return (
-        <div className="flex flex-col md:flex-row md:gap-8 justify-between mb-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-between pb-8 border-l pl-4 border-yinmn_blue dark:border-timberwolf-400">
             <div className="flex-grow basis-3/4">
+                <span className="relative -ml-5 top-7 border-4 border-yinmn_blue dark:border-timberwolf-400 w-1 h-1 rounded-full block"></span>
                 <div className="my-2 flex flex-col md:flex-row justify-start md:gap-4">
                     <h3 className="text-xl font-semibold">{workName}</h3>
-                    <span className="text-sm font-normal my-auto text-yinmn_blue dark:text-timberwolf-400">{`${jobDate(months, work.startDate)} - ${endDate}`}</span>
+                    <span className="text-sm font-normal my-auto text-yinmn_blue dark:text-timberwolf-400">
+                        {`${jobDate(months, work.startDate)} - ${endDate}`}
+                    </span>
                 </div>
                 <div className="text-lg font-semibold">{work.position}</div>
                 {work.summary !== '' && (
@@ -168,7 +176,7 @@ function Jobs({work}: { work: ResumeType.Work[] | undefined }) {
     const { t } = useTranslation();
     if (work && work.length > 0) {
         return (
-            <section className="my-8">
+            <section className="section">
                 <h2 className="section-header">{t('sections.jobs')}</h2>
                 {work.map(job => {
                     return <Job key={`${job.name}_${job.startDate}`} work={job}/>
@@ -183,17 +191,12 @@ function Skill({skill}: { skill: ResumeType.Skill }) {
     return (
         <div>
             <h3 className="text-xl font-semibold">{skill.name}</h3>
-            {skill.level !== '' && <div className="mb-4 text-sm text-yinmn_blue dark:text-timberwolf-400">{skill.level}</div>}
+            {skill.level !== '' &&
+                <div className="mb-4 text-sm text-yinmn_blue dark:text-timberwolf-400">{skill.level}</div>}
             {skill.keywords && skill.keywords.length > 0 && (
                 <div className="flex flex-row gap-2 items-center justify-center flex-wrap basis-auto shrink grow">
                     {skill.keywords.map((keyword) => {
-                        return (
-                            <span
-                                key={keyword}
-                                className="flex-auto px-2 grow-0 leading-8 whitespace-nowrap rounded-xl bg-yinmn_blue text-platinum dark:bg-eerie_black dark:text-timberwolf-700">
-                                {keyword}
-                            </span>
-                        )
+                        return <SkillTag key={keyword} skill={keyword} />
                     }) }
                 </div>
             )}
@@ -204,7 +207,7 @@ function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
     const { t } = useTranslation();
     if (skills && skills.length > 0) {
         return (
-            <section>
+            <section className="section">
                 <h2 className="section-header">{t('sections.skills')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {skills.map((skill) => {
@@ -221,7 +224,7 @@ function Resume() {
     const { i18n } = useTranslation();
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
-        <div className="mb-auto p-8 py-4">
+        <div className="flex flex-col gap-4 md:gap-6 mb-auto p-4 py-2 md:p-8 md:py-4">
             <Basics basics={resume.basics} languages={resume.languages} />
             <Jobs work={resume.work} />
             <Skills skills={resume.skills} />
