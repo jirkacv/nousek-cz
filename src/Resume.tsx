@@ -90,7 +90,7 @@ interface BasicsProps {
 function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
-            <section className="section flex flex-col md:flex-row justify-between">
+            <section className="section flex flex-col lg:flex-row justify-between">
                 <div className="flex-grow">
                     <h1 className="text-4xl my-2 font-semibold">{basics.name}</h1>
                     {basics.label !== '' && (
@@ -144,10 +144,10 @@ function Job({work}: { work: ResumeType.Work }) {
             : <span>work.name</span>
 
     return (
-        <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-between pb-8 border-l pl-4 border-yinmn_blue dark:border-timberwolf-400">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-between pb-8 border-l pl-4 border-yinmn_blue dark:border-timberwolf-400">
             <div className="flex-grow basis-3/4">
                 <span className="relative -ml-5 top-7 border-4 border-yinmn_blue dark:border-timberwolf-400 w-1 h-1 rounded-full block"></span>
-                <div className="my-2 flex flex-col md:flex-row justify-start md:gap-4">
+                <div className="my-2 flex flex-col lg:flex-row justify-start lg:gap-4">
                     <h3 className="text-xl font-semibold">{workName}</h3>
                     <span className="text-sm font-normal my-auto text-yinmn_blue dark:text-timberwolf-400">
                         {`${jobDate(months, work.startDate)} - ${endDate}`}
@@ -209,7 +209,7 @@ function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
         return (
             <section className="section">
                 <h2 className="section-header">{t('sections.skills')}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     {skills.map((skill) => {
                         return <Skill key={skill.name} skill={skill} />
                     })}
@@ -224,7 +224,7 @@ function Resume() {
     const { i18n } = useTranslation();
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
-        <div className="flex flex-col gap-4 md:gap-6 mb-auto p-4 py-2 md:p-8 md:py-4">
+        <div className="flex flex-col gap-4 lg:gap-6 mb-auto p-4 py-2 lg:p-8 lg:py-4">
             <Basics basics={resume.basics} languages={resume.languages} />
             <Jobs work={resume.work} />
             <Skills skills={resume.skills} />
