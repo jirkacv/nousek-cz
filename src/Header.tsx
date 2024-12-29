@@ -13,7 +13,7 @@ function LanguageIcon (props: LanguageIconProps) {
     }
 
     return (
-        <button className="h-4 w-4 my-4 mr-4" onClick={onClick}>
+        <button className="h-4 w-4 mt-4 mr-4" onClick={onClick}>
             <img src={`/${props.language}/flag_4x3.svg`} alt={t('language')} className="h-4 w-4" />
         </button>
     )
@@ -21,7 +21,7 @@ function LanguageIcon (props: LanguageIconProps) {
 
 function Header() {
     return (
-        <header className="h-12">
+        <header className="px-0 md:px-8 h-8 bg-silver_lake_blue dark:bg-eerie_black">
             <div className="flex flex-row justify-end">
                 { languageCodes.map((language) => <LanguageIcon key={language} language={language} />)}
             </div>

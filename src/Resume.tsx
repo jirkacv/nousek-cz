@@ -90,7 +90,7 @@ interface BasicsProps {
 function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
-            <section className="flex flex-col md:flex-row justify-between">
+            <section className="section flex flex-col md:flex-row justify-between">
                 <div className="flex-grow">
                     <h1 className="text-4xl my-2 font-semibold">{basics.name}</h1>
                     {basics.label !== '' && (
@@ -176,7 +176,7 @@ function Jobs({work}: { work: ResumeType.Work[] | undefined }) {
     const { t } = useTranslation();
     if (work && work.length > 0) {
         return (
-            <section className="my-8">
+            <section className="section">
                 <h2 className="section-header">{t('sections.jobs')}</h2>
                 {work.map(job => {
                     return <Job key={`${job.name}_${job.startDate}`} work={job}/>
@@ -207,7 +207,7 @@ function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
     const { t } = useTranslation();
     if (skills && skills.length > 0) {
         return (
-            <section>
+            <section className="section">
                 <h2 className="section-header">{t('sections.skills')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {skills.map((skill) => {
@@ -224,7 +224,7 @@ function Resume() {
     const { i18n } = useTranslation();
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
-        <div className="mb-auto p-8 py-4">
+        <div className="flex flex-col gap-4 md:gap-6 mb-auto p-4 py-2 md:p-8 md:py-4">
             <Basics basics={resume.basics} languages={resume.languages} />
             <Jobs work={resume.work} />
             <Skills skills={resume.skills} />
