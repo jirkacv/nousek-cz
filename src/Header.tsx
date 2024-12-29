@@ -21,7 +21,7 @@ function LanguageIcon (props: LanguageIconProps) {
 
 function Header() {
     return (
-        <header className="px-0 md:px-8 h-8 bg-silver_lake_blue dark:bg-eerie_black">
+        <header className="px-0 md:px-8 h-8">
             <div className="flex flex-row justify-end">
                 { languageCodes.map((language) => <LanguageIcon key={language} language={language} />)}
             </div>
