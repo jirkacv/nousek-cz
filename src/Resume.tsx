@@ -90,7 +90,7 @@ interface BasicsProps {
 function Basics({basics, languages}: BasicsProps) {
     if (basics) {
         return (
-            <section className="section flex flex-col lg:flex-row justify-between">
+            <section className="section flex flex-col lg:flex-row justify-between gap-8">
                 <div className="flex-grow">
                     <h1 className="text-4xl my-2 font-semibold">{basics.name}</h1>
                     {basics.label !== '' && (
