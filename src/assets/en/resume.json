@@ -39,7 +39,8 @@
         "Prismic (headless CMS)",
         "Postnord (automated returns, package tracking)",
         "CookieBot",
-        "Google services (Search console, GTM, Google Analytics)"
+        "Google services (Search console, GTM, Google Analytics)",
+        "Trustpilot (custom review storage and aggregations + UI)"
       ],
       "url": "https://www.linkedin.com/company/proffsmagasinet/",
       "skills": [

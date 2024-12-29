@@ -22,10 +22,10 @@
 
 @layer components {
     .section-header {
-        @apply font-semibold text-2xl mb-2
+        @apply print:mb-1 font-semibold text-2xl mb-2
     }
 
     .section {
-        @apply rounded-3xl border border-transparent bg-platinum dark:bg-black_olive px-4 py-3
+        @apply print:py-1 rounded-3xl border border-transparent bg-platinum dark:bg-black_olive px-4 py-3
     }
 }
