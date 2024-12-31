@@ -40,7 +40,7 @@ function ThemeSwitch() {
     const toggleTheme = () => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         setCurrentTheme(newTheme);
-        window.setTheme(newTheme.toString());
+        window.setTheme(newTheme);
     }
 
     const translationKey = currentTheme === 'dark' ? 'theme.toLight' : 'theme.toDark';
