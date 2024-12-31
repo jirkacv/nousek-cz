@@ -224,7 +224,7 @@ function Resume() {
     const { i18n } = useTranslation();
     const resume = i18n.language === 'cs' ? csResume : enResume
     return (
-        <div className="print:py-0 flex flex-col gap-4 lg:gap-6 mb-auto p-4 py-2 lg:p-8 lg:py-4">
+        <div className="print:py-0 flex flex-col gap-4 lg:gap-6 mb-auto p-4 lg:p-8 lg:pb-4 lg:pt-0">
             <Basics basics={resume.basics} languages={resume.languages} />
             <Jobs work={resume.work} />
             <Skills skills={resume.skills} />

@@ -13,5 +13,5 @@ The goal of this project wasn't to support all properties of JSON Resume - so it
 I might add more later, but since it's for personal use, I just used what I felt like using. For proper themes, check https://jsonresume.org/themes
 
 ## TODO 
-- ✅ ~~PDF generation~~ 
-- 🔳 Theme switching
+- ✅ PDF generation 
+- ✅ User controlled dark mode switching

@@ -2,17 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-image: url("/subtle-prism.svg");
-    }
+body {
+    background-image: url("/subtle-prism.svg");
 }
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-image: url("/endless-constellation.svg");
-    }
+.dark body {
+    background-image: url("/endless-constellation.svg");
 }
 
 [class*="fa-"] {
