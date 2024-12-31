@@ -31,18 +31,17 @@ type Theme = 'dark' | 'light';
 function ThemeSwitch() {
     const [ currentTheme, setCurrentTheme ] = useState<Theme>('light');
     const { t } = useTranslation();
-    const toggleTheme = () => {
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        setCurrentTheme(newTheme);
-        window.setTheme(newTheme.toString());
-    }
-
     useEffect(() => {
         if (localStorage.getItem('theme') === 'dark') {
             setCurrentTheme('dark');
         }
     }, []);
+
+    const toggleTheme = () => {
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setCurrentTheme(newTheme);
+        window.setTheme(newTheme.toString());
+    }
 
     const translationKey = currentTheme === 'dark' ? 'theme.toLight' : 'theme.toDark';
     return (
