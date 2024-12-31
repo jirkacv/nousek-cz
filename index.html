@@ -7,6 +7,21 @@
     <meta name="description" content="Personal webpage / resume">
     <meta name="author" content="Jiří Petrnoušek">
     <title>Jiří Petrnoušek</title>
+    <script type="text/javascript">
+      window.setTheme = (theme) => {
+        localStorage.setItem('theme', theme);
+        window.document.documentElement.className = theme;
+      }
+
+      let themeLocalStorage = localStorage.getItem('theme');
+      if (themeLocalStorage) {
+        window.document.documentElement.className = themeLocalStorage;
+      } else {
+        let isDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches;
+        window.setTheme(isDarkTheme ? 'dark' : 'light');
+      }
+
+    </script>
   </head>
   <body class="font-sans size-full min-h-screen bg-silver_lake_blue text-oxford_blue dark:bg-eerie_black dark:text-timberwolf-700">
     <div id="root"></div>

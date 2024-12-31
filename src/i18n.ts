@@ -24,6 +24,10 @@ void i18n
             en: {
                 translation: {
                     language: 'English',
+                    theme: {
+                        toDark: 'Dark mode',
+                        toLight: 'Light mode',
+                    },
                     months: 'january;february;march;april;may;june;july;august;september;october;november;december',
                     present: 'present',
                     sections : {
@@ -37,6 +41,10 @@ void i18n
             cs: {
                 translation: {
                     language: 'Čeština',
+                    theme: {
+                        toDark: 'Tmavý vzhled',
+                        toLight: 'Světlý vzhled',
+                    },
                     months: 'leden;únor;březen;duben;květen;červen;červenec;srpen;září;říjen;listopad;prosinec',
                     present: 'současnost',
                     sections : {
