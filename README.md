@@ -14,4 +14,4 @@ I might add more later, but since it's for personal use, I just used what I felt
 
 ## TODO 
 - ✅ PDF generation 
-- ✅ Theme switching
+- ✅ User controlled dark mode switching
