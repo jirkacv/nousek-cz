@@ -2,7 +2,12 @@
 import enResume from "./assets/en/resume.json"
 import { Resume } from './resume-types'
 
-const cs = csResume as Resume
-const en = enResume as Resume
+function getResume (locale : string) : Resume {
+    switch (locale) {
+        case 'en': return enResume;
+        case 'cs': return csResume;
+        default: return enResume;
+    }
+}
 
-export { cs, en }
+export { getResume }
