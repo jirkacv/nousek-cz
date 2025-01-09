@@ -1,5 +1,6 @@
-﻿import { cs as csResume, en as enResume } from './resumes.ts'
+﻿import { getResume } from './resumes.ts'
 import * as ResumeType from './resume-types'
+import { languageCodes } from './i18n';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, faEnvelope, faMap } from '@fortawesome/free-solid-svg-icons'
@@ -220,15 +221,56 @@ function Skills({skills}: { skills: ResumeType.Skill[] | undefined }) {
     return null;
 }
 
-function Resume() {
-    const { i18n } = useTranslation();
-    const resume = i18n.language === 'cs' ? csResume : enResume
+function ResumeSEO({ resume } : { resume: ResumeType.Resume }) {
+    const name = resume.basics?.name ?? '';
+
+    const profiles = resume.basics?.profiles ?? [];
+    const profileUrls = profiles.map(p => p.url);
+
+    const profileSchema =
+        name
+            ? JSON.stringify(
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ProfilePage",
+                    "dateCreated": "2024-12-27T00:00:00",
+                    "mainEntity": {
+                        "@type": "Person",
+                        "name": name,
+                        "description": resume.basics?.summary,
+                        "sameAs": profileUrls
+                    }
+                })
+            : null;
+
+    const languageVersions =
+        languageCodes.length > 1
+            ? languageCodes.map (l => (<link rel="alternate" hrefLang={l} href={`https://nousek.cz/${l}`} />))
+            : null;
+
     return (
-        <div className="print:py-0 flex flex-col gap-4 lg:gap-6 mb-auto p-4 lg:p-8 lg:pb-4 pt-0 lg:pt-0">
-            <Basics basics={resume.basics} languages={resume.languages} />
-            <Jobs work={resume.work} />
-            <Skills skills={resume.skills} />
-        </div>
+        <>
+            {name !== '' && <meta name="author" content={name}/>}
+            {name !== '' && <title>{name}</title>}
+            {profileSchema && <script type="application/ld+json">{profileSchema}</script>}
+            {languageVersions}
+        </>
+    )
+}
+
+function Resume() {
+    const {i18n} = useTranslation();
+    const resume = getResume(i18n.language);
+
+    return (
+        <>
+            <ResumeSEO resume={resume} />
+            <div className="print:py-0 flex flex-col gap-4 lg:gap-6 mb-auto p-4 lg:p-8 lg:pb-4 pt-0 lg:pt-0">
+                <Basics basics={resume.basics} languages={resume.languages} />
+                <Jobs work={resume.work} />
+                <Skills skills={resume.skills} />
+            </div>
+        </>
     )
 }
 
