@@ -31,7 +31,7 @@
       "position": "Senior Developer",
       "startDate": "2020-12-31",
       "endDate": "",
-      "summary": "Development of inhouse e-commerce solution, both front-end and back-end (React.js, .NET Core, F#, Azure, Pulumi). Also worked on integrations with various 3rd party systems: ",
+      "summary": "Development of in-house e-commerce solution, both front-end and back-end (React.js, .NET Core, F#, Azure, Pulumi). Also worked on integrations with various 3rd party systems: ",
       "highlights": [
         "Bloomreach CDP (frontend and backend tracking, product recommendations, reporting, emailing)",
         "Antavo (customer loyalty platform)",
@@ -40,7 +40,9 @@
         "Postnord (automated returns, package tracking)",
         "CookieBot",
         "Google services (Search console, GTM, Google Analytics)",
-        "Trustpilot (custom review storage and aggregations + UI)"
+        "Trustpilot (custom review storage and aggregations + UI)",
+        "Designed and implemented company wide GDPR functionality",
+        "Designed and implemented in-house Member club (replacement for Antavo)"
       ],
       "url": "https://www.linkedin.com/company/proffsmagasinet/",
       "skills": [
